@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Doctor List- Ethicure Medical Hospital</title>
+</head>
+<header>
+    <div class="topnav">
+        
+        <a href="{{ url_for('index') }}">Logout</a>
+        <a href="javascript:history.back()">Go Back</a>
+
+        <h1>ETHICURE MEDICAL HOSPITAL</h1>
+        
+      </div>
+    
+</header>
+<body>
+    <h2>Doctor List</h2>
+    <table>
+        <tr>
+            <th>Doctor ID</th>
+            <th>Name</th>
+            <th>Specialty</th>
+            <th>Phone</th>
+            <th>Action</th> 
+        </tr>
+        {% for doctor in doctors %}
+        <tr>
+            <td>{{ doctor[0] }}</td>
+            <td>{{ doctor[1] }}</td>
+            <td>{{ doctor[2] }}</td>
+            <td>{{ doctor[3] }}</td>
+            <td>
+                <form action="{{ url_for('delete_doctor', doctor_id=doctor[0]) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this doctor?');">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

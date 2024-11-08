@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Add Patients</title>
+
+</head>
+<header>
+    <div class="topnav">
+        
+        <a href="{{ url_for('index') }}">Logout</a>
+        <a href="javascript:history.back()">Go Back</a>
+
+        <h1>ETHICURE MEDICAL HOSPITAL</h1>
+      </div>
+    
+</header>
+<body>
+    <h1>Manage Patients</h1>
+    <form action="{{ url_for('add_patients') }}" method="post" onsubmit="return confirm('Details added successfully');">
+        <label>Patient ID:</label>
+        <input type="text" name="patient_id" required><br>
+        <label>Patient Name:</label>
+        <input type="text" name="patient_name" required><br>
+        <label>Patient Age:</label>
+        <input type="number" name="patient_age" required><br>
+        <label>Diseases:</label>
+        <input type="text" name="diseases" required><br>
+        <label>Phone:</label>
+        <input type="text" name="phone" required><br>
+
+        <label>Doctor id:</label>
+        <input type="text" name="docid" required><br>
+        <label>Doctor Name:</label>
+        <input type="text" name="docname" required><br>
+
+        <button type="submit">Add Patient</button>
+
+    </form>
+
+</body>
+</html>

@@ -21,8 +21,7 @@
 <body>
     <h1>Manage Patients</h1>
     <form action="{{ url_for('add_patients') }}" method="post" onsubmit="return confirm('Details added successfully');">
-        <label>Patient ID:</label>
-        <input type="text" name="patient_id" required><br>
+        
         <label>Patient Name:</label>
         <input type="text" name="patient_name" required><br>
         <label>Patient Age:</label>
@@ -32,8 +31,7 @@
         <label>Phone:</label>
         <input type="text" name="phone" required><br>
 
-        <label>Doctor id:</label>
-        <input type="text" name="docid" required><br>
+        
         <label>Doctor Name:</label>
         <input type="text" name="docname" required><br>
 

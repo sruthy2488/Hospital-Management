@@ -158,23 +158,25 @@ th, td {
 header{
     /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #65a8f0;
+    background-color: #d6d5d0;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: right;
-    color: #f2f2f2;
+    color: #be1515;
     text-align: center;
-    padding: 14px 16px;
+    padding: 29px 16px;
     text-decoration: none;
     font-size: 17px;
+    
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    padding: 1cm;
+    background-color: #007BFF;
     color: black;
   }
   

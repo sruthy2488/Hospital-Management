@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Staff List- Ethicure Medical Hospital</title>
+</head>
+<header>
+    <div class="topnav">
+        
+        <a href="{{ url_for('index') }}">Logout</a>
+        <a href="javascript:history.back()">Go Back</a>
+
+        <h1>ETHICURE MEDICAL HOSPITAL</h1>
+      </div>
+    
+</header>
+<body>
+    <h2>Staff List</h2>
+    <table>
+        <tr>
+            <th>Staff ID</th>
+            <th>Name</th>
+            <th>Work</th>
+            <th>Phone</th>
+            
+        </tr>
+        {% for staff in staff %}
+        <tr>
+            <td>{{ staff[0] }}</td>
+            <td>{{ staff[1] }}</td>
+            <td>{{ staff[3] }}</td>
+            <td>{{ staff[4] }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+    
+
+</body>
+</html>

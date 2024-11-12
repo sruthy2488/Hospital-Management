@@ -21,8 +21,7 @@
 <body>
     <h1>Manage Staff</h1>
     <form action="{{ url_for('add_staff') }}" method="post">
-        <label>Staff ID:</label>
-        <input type="text" name="staff_id" required><br>
+       
         <label>Staff Name:</label>
         <input type="text" name="staff_name" required><br>
         <label>Staff Age:</label>
@@ -31,9 +30,7 @@
         <input type="text" name="staff_work" required><br>
         <label>Phone:</label>
         <input type="text" name="phone" required><br>
-        <label>password:</label>
-        <input type="text" name="password" required><br>
-        
+       
         <button type="submit">Add Staff Member</button>
     </form>
 
